@@ -12,7 +12,9 @@ public class Box {
    public Box(int row, int col) {
 	   
 	   // TODO: Initialise the variables row, col, and content
-  
+	   this.row = 0;
+	   this.col = 0;
+	   clear();
    }
  
    /**
@@ -21,7 +23,8 @@ public class Box {
    public void clear() {
 	   
       // TODO: Set the value of content to EMPTY (Remember this is an enum)
-	   
+	   content = Player.EMPTY;
+
    }
  
    /**

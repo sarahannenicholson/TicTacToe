@@ -3,8 +3,8 @@
  */
 public class Grid {
 	// Define the amount of rows and columns
-	int ROWS = 3;			// Rows
-	int COLUMNS = 3;		// Columns
+	public static final int ROWS = 3;			// Rows
+	public static final int COLUMNS = 3;		// Columns
  
 	Box[][] board;								// Represents the game board as a grid
 	int currentRow;								// Row that was played last
@@ -16,6 +16,8 @@ public class Grid {
    public Grid() {
       
       // TODO: Initialise the board array using ROWS and COLUMNS
+	   
+	   board = new Box [3][3];
       
       for (int row = 0; row < ROWS; ++row) {
          for (int col = 0; col < COLUMNS; ++col) {

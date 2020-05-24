@@ -27,7 +27,7 @@ public class GameMain {
 	   // TODO: Assign the default values for currentPlayer (Player.X), gameOver (false), and winner (null)
 	   winner = null;
 	   // Begin playing the game
-	   currentPlayer = Player.O;
+	   currentPlayer = Player.X;
 	   // TODO: Call the "play()" method
 	   play();
    }
@@ -48,8 +48,13 @@ public class GameMain {
 		         }
 	        	 
 	        	 // TODO: Display result if player O wins
-	        	 
+	        	 if (winner == Player.O) {
+	        		 System.out.println("Player O Wins!");
+	        	 }
 	        	 // TODO: Display result if it was a draw
+	        	 else {
+	        		 System.out.println("Its a draw!");
+	        	 }
 	         }
 	         
 	         // Switch turn to the next player
@@ -77,7 +82,7 @@ public class GameMain {
          } else {
             
         	 // TODO: Inform Player 'O' to enter their move
-        	 
+        	 System.out.println("Player 'O', enter your move (row[1-3] column[1-3]): ");
          }
          
          // Obtains input from the player for both row and column
@@ -97,6 +102,7 @@ public class GameMain {
          } else {
         	 
         	 // TODO: Display an error message that the move was not valid.
+        	 System.out.println("Invalid Move, please enter your move (row[1-3] column[1-3])");
          }
          
       } while (!validInput);   // Repeat until input is valid
@@ -129,7 +135,8 @@ public class GameMain {
 	   do {
 		   new GameMain();
 		   String input = scanner.next();
-		   if () {
+		
+		   if ( ){
 			   //if input doesnt = y then close
 		   }
 		 }
