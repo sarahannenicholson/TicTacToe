@@ -34,6 +34,26 @@ public class Box {
 	   
 	   // TODO: Print the content of this box (" X " if it Player.X, " O " for Player.O and "   " for Player.Empty)
 	   // Hint: Can use an if-else or switch statement
+	   switch(content) {
 	   
+	   case X: {
+	   
+		   System.out.println("X");
+	   
+	   }
+	   
+	   case O: {
+		   
+		   System.out.println("O");
+		   
+	   }
+	   
+	   case EMPTY: {
+		   
+		   System.out.println(" ");
+		   
+	   }
+	   
+	  }
    }
 }

@@ -3,5 +3,5 @@
  */
 
 public enum Player {
-   EMPTY, X, O
+   EMPTY, X, O,
 }

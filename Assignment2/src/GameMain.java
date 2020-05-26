@@ -115,10 +115,17 @@ public class GameMain {
       if (grid.hasWon(turnPlayer)) {
     	  
     	  // TODO: Set gameOver and winner appropriately
+    	  System.out.println("Congratulations " + currentPlayer + " for your win!");
+    	  winner = currentPlayer;
+    	  gameOver = true;    	  
 
       } else if (grid.isDraw()) {
 
     	  // TODO: Set gameOver and winner appropriately
+    	  
+    	  gameOver = true;
+    	  System.out.println("Good game everyone! but this time its a Draw!");
+    	  
       }
    }
  
@@ -131,16 +138,22 @@ public class GameMain {
 	   
 	   // TODO: Then update the loop to ask the player if they want to play again, exit if they do not
 	   
-	   boolean playAgain = true;
+	   boolean Y = true;     
 	   do {
 		   new GameMain();
-		   String input = scanner.next();
-		
-		   if ( ){
-			   //if input doesnt = y then close
+		   
+		   System.out.println("Would you like to play again? (Y/N?)");		   
+		   Y = Boolean.valueOf(scanner.nextLine());		   
+		   if(Y) {
+			   new GameMain();
+		   }
+		   
+		   else {
+			   System.out.println("Closing Game, Goodbye!");
+			   System.exit(0);
 		   }
 		 }
-	   while(playAgain);
+	   while(Y);
 	   new GameMain();
 	}
 }
